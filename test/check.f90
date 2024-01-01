@@ -10,6 +10,7 @@ program check
       a(i, 2) = i
     end do
     call s%head()
+    call s%scatter(a)
     ! call s%add_text(50, 50, 10, "red", "Hello, World!")
     call s%tail()
     call s%export()
