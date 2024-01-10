@@ -1,15 +1,22 @@
 name = "svg"
-dependencies.stdlib = "*"
+# dependencies.stdlib = "*"
 version = "0.1.0"
-license = "license"
+license = "MIT"
 author = "Andre Smit"
 maintainer = "freevryheid@gmail.com"
 copyright = "Copyright 2023, Andre Smit"
+# [dependencies]
+# stdlib = "*"
+# stdlib = { git = "https://github.com/fortran-lang/stdlib.git", branch="stdlib-fpm" }
 [build]
-auto-executables = true
-auto-tests = true
-auto-examples = true
-module-naming = false
+external-modules = ["stdlib_strings", "stdlib_math", "stdlib_optval", "stdlib_kinds"]
+link = ["fortran_stdlib"]
+# auto-executables = true
+# auto-tests = true
+# auto-examples = true
+# module-naming = false
+[library]
+include-dir = "../../../../usr/include/fortran_stdlib/GNU-13.2.1"
 [install]
 library = false
 [fortran]

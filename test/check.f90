@@ -15,7 +15,10 @@ program check
     ! call s%rect()
     ! call s%grid()
     ! call s%circle(10.,10.,.5)
+
     call s%scatter(a)
+    ! call s%rect()
+    call s%term()
     ! call s%add_text(50, 50, 10, "red", "Hello, World!")
     ! call s%tail()
     call s%export()
